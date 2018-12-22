@@ -1,0 +1,8 @@
+CREATE TABLE `part` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `required` bit(1) NOT NULL DEFAULT b'0',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
