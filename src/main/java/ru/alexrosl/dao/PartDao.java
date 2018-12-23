@@ -9,5 +9,6 @@ public interface PartDao {
     int update (Part part);
     int delete (int id);
     Part get (int id);
+    Part get (String name);
     List<Part> list();
 }

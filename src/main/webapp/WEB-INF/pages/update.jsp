@@ -3,12 +3,15 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<t:layout title="Добавить новую деталь">
-<form:form id="formPost" modelAttribute="newPart" method="post" action="submitNew">
+<t:layout title="Обновить">
+<form:form id="forUpdate" modelAttribute="part" method="post" action="submitUpdate">
     Название
     <form:input required="true" placeholder="Название детали" path="name" />
     Количество
-    <form:input type="number" min="1" max="99" value="1" path="quantity"/>
+    <form:input type="number" min="1" max="99" value="${part.quantity}" path="quantity"/>
+    <form:hidden path="id"/>
     <button type="submit">Сохранить</button>
 </form:form>
+<span><a href="list">Отмена</a></span>
+<span><a href="delete?id=${newPart.id}">Удалить</a></span>
 </t:layout>

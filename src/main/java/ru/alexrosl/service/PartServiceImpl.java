@@ -31,6 +31,11 @@ public class PartServiceImpl implements PartService {
     }
 
     @Override
+    public Part get(String name) {
+        return dao.get(name);
+    }
+
+    @Override
     public List<Part> list() {
         return dao.list();
     }
