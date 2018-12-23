@@ -14,6 +14,9 @@ import ru.alexrosl.model.Part;
 import ru.alexrosl.service.PartService;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.Comparator.comparing;
 
 @Controller
 public class PartController {
@@ -26,6 +29,11 @@ public class PartController {
     public ModelAndView partList(@RequestParam(required = false) Integer page) {
         ModelAndView modelAndView = new ModelAndView("list");
         List<Part> list = service.list();
+
+        list = list.stream().sorted(
+                comparing(Part::getRequired).reversed()
+                .thenComparing(Part::getName)
+        ).collect(Collectors.toList());
 
         Integer total = 0;
         if (list.size() > 0) {
