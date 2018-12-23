@@ -9,6 +9,8 @@
     <form:input required="true" placeholder="Название детали" path="name" />
     Количество
     <form:input type="number" min="1" max="99" value="${part.quantity}" path="quantity"/>
+    Необходимость
+    <form:checkbox path="required"/>
     <form:hidden path="id"/>
     <button type="submit">Сохранить</button>
 </form:form>

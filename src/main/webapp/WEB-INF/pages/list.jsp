@@ -5,30 +5,33 @@
 
 <t:layout title="Список деталей">
     <div class="container-fluid">
-            <table class="table table-hover text-centered">
+        <table class="table table-hover text-centered">
+            <tr>
+                    <%--<th>Id</th>--%>
+                <th>Наименование</th>
+                <th>Количество</th>
+                <th>Необходимость</th>
+                    <%--<th>Created</th>--%>
+                <th>Действия</th>
+            </tr>
+            <c:forEach items="${list}" var="item">
                 <tr>
-                        <%--<th>Id</th>--%>
-                    <th>Наименование</th>
-                    <th>Количество</th>
-                    <th>Необходимость</th>
-                        <%--<th>Created</th>--%>
-                    <th>Действия</th>
-                </tr>
-                <c:forEach items="${list}" var="item">
-                    <tr>
-                            <%--<td>${item.id}</td>--%>
-                        <td>${item.name}</td>
-                        <td>${item.quantity}</td>
-                        <td><input type="checkbox" <c:if test="${item.required}">checked</c:if> disabled></td>
-                            <%--<td><c:out value="${item.created}"/></td>--%>
-                        <td>
-                            <span><a href="update?id=${item.id}">Редактировать</a></span>
-                            <span><a href="delete?id=${item.id}">Удалить</a></span>
+                        <%--<td>${item.id}</td>--%>
+                    <td>${item.name}</td>
+                    <td>${item.quantity}</td>
+                    <td><input type="checkbox" <c:if test="${item.required}">checked</c:if> disabled></td>
+                        <%--<td><c:out value="${item.created}"/></td>--%>
+                    <td>
+                        <span><a href="update?id=${item.id}">Редактировать</a></span>
+                        <span><a href="delete?id=${item.id}">Удалить</a></span>
 
-                        </td>
-                    </tr>
-                </c:forEach>
-            </table>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+        <div class="summary">
+            <span>Общее количество компьютеров, которые можно собрать, равно ${total}</span>
+        </div>
     </div>
 
 

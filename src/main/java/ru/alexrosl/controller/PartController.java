@@ -24,7 +24,13 @@ public class PartController {
     public String greeting(ModelMap map) {
         List<Part> list = service.list();
 
+        Integer total = list.stream().
+                filter(Part::getRequired).
+                map(Part::getQuantity).
+                min(Integer::compare).get();
+
         map.addAttribute("list", list);
+        map.addAttribute("total", total);
         return "list";
     }
 

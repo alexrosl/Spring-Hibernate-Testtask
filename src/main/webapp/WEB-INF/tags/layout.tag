@@ -12,9 +12,13 @@
         }
         .table {
             border-radius: 5px;
-            width: 50%;
+            width: 100%;
             margin: 0px auto;
             float: none;
+        }
+        .summary {
+            text-align: center;
+            color: blue;
         }
     </style>
 </head>
