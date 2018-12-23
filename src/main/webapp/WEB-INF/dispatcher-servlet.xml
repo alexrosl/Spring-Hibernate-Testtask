@@ -10,12 +10,8 @@
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix">
-            <value>.jsp</value>
-        </property>
+        <property name="suffix" value=".jsp"/>
     </bean>
     <context:component-scan base-package="ru.alexrosl.controller"/>
-
-    <mvc:annotation-driven/>
 
 </beans>

@@ -35,7 +35,8 @@
         </property>
     </bean>
 
-    <bean id="access" class="ru.alexrosl.SimpleDBAccess"></bean>
+    <bean id="partDao" class="ru.alexrosl.dao.PartDaoImpl"/>
+    <bean id="partService" class="ru.alexrosl.service.PartServiceImpl"/>
 
 
 
