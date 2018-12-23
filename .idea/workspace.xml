@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="466949cc-3a7d-44ef-8a4c-6e6a7671a905" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexrosl/controller/PartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexrosl/controller/PartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,6 +69,7 @@
           <entry key="gitignore" value="1" />
           <entry key="java" value="22" />
           <entry key="jsp" value="16" />
+          <entry key="md" value="1" />
           <entry key="part" value="4" />
           <entry key="properties" value="2" />
           <entry key="sql" value="3" />
@@ -85,6 +85,7 @@
           <entry key="Database Element" value="4" />
           <entry key="JAVA" value="22" />
           <entry key="JSP" value="18" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="2" />
@@ -99,6 +100,7 @@
           <entry key="gitignore" value="7" />
           <entry key="java" value="2973" />
           <entry key="jsp" value="1790" />
+          <entry key="md" value="74" />
           <entry key="properties" value="9" />
           <entry key="sql" value="2" />
           <entry key="tag" value="330" />
@@ -111,6 +113,7 @@
           <entry key="CSS" value="56" />
           <entry key="JAVA" value="2973" />
           <entry key="JSP" value="2120" />
+          <entry key="Markdown" value="74" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="Properties" value="9" />
           <entry key="SQL" value="2" />
@@ -164,17 +167,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Script.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+            <state relative-caret-position="366">
+              <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://e8b549a5-00b4-4aeb-9946-976a53b019f6/schema/test/table/part">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="15">
+                <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -266,6 +272,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/Script.sql" />
         <option value="$PROJECT_DIR$/src/main/java/ru/alexrosl/controller/PartController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -289,10 +296,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-57" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="33" />
-    <option name="width" value="1405" />
+    <option name="width" value="1596" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -430,7 +436,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545579453276" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545579543028" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ru/alexrosl" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -545,15 +551,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545473144745</updated>
-      <workItem from="1545473149230" duration="34444000" />
+      <workItem from="1545473149230" duration="34626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34444000" />
+    <option name="totallyTimeSpent" value="34626000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-57" y="33" width="1405" height="1047" extended-state="1" />
+    <frame x="0" y="33" width="1596" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -562,12 +568,12 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
       <window_info id="Web" sideWeight="0.5019685" side_tool="true" weight="0.22785768" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980315" visible="true" weight="0.22246858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980315" visible="true" weight="0.19494818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" weight="0.32934782" />
       <window_info anchor="bottom" id="Database Console" weight="0.3293348" />
       <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3206522" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3206522" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -575,14 +581,14 @@
       <window_info anchor="bottom" id="Messages" weight="0.31515813" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42391303" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42391303" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info active="true" anchor="right" id="Database" visible="true" weight="0.28677014" />
+      <window_info anchor="right" id="Database" visible="true" weight="0.25129533" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
@@ -898,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/alexrosl/controller/PartController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -919,6 +918,23 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Script.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
