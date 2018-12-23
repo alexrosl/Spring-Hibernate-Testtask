@@ -25,6 +25,7 @@
             <td><c:out value="${item.created}"/></td>
         </tr>
     </c:forEach>
+    <a href="/create">Добавить новую деталь</a>
 </table>
 </body>
 </html>
