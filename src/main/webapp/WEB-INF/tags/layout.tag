@@ -5,20 +5,15 @@
 <html>
 <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="<c:url value="/public/styles.css" />" rel="stylesheet">
     <title><c:out value="${title}"/> </title>
     <style type="text/css">
-        a:hover{
-            text-decoration: none;
+        .btn a {
+            color: white;
         }
-        .table {
-            border-radius: 5px;
-            width: 100%;
-            margin: 0px auto;
-            float: none;
-        }
-        .summary {
-            text-align: center;
-            color: blue;
+
+        .btn a:hover {
+            color: white;
         }
     </style>
 </head>
@@ -51,5 +46,6 @@
 </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </html>

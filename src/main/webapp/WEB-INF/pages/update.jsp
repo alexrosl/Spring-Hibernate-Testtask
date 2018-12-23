@@ -4,16 +4,25 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:layout title="Обновить">
-<form:form id="forUpdate" modelAttribute="part" method="post" action="submitUpdate">
-    Название
-    <form:input required="true" placeholder="Название детали" path="name" />
-    Количество
-    <form:input type="number" min="1" max="99" value="${part.quantity}" path="quantity"/>
-    Необходимость
-    <form:checkbox path="required"/>
-    <form:hidden path="id"/>
-    <button type="submit">Сохранить</button>
-</form:form>
-<span><a href="list">Отмена</a></span>
-<span><a href="delete?id=${newPart.id}">Удалить</a></span>
+    <div class="jumbotron">
+        <form:form id="forUpdate" modelAttribute="part" method="post" action="submitUpdate">
+            <div class="form-group">
+                <label for="nameId">Название</label>
+                <form:input id="nameId" required="true" placeholder="Название детали" path="name" />
+            </div>
+            <div class="form-group">
+                <label for="quantityId">Количество</label>
+                <form:input id="quantityId" type="number" min="0" max="99" value="${part.quantity}" path="quantity"/>
+            </div>
+            <div class="form-group">
+                <label for="requiredId">Необходимость</label>
+                <form:checkbox id="requiredId" path="required"/>
+            </div>
+            <form:hidden path="id"/>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+            <button class="btn btn-info"><a href="list">Отмена</a></button>
+            <button class="btn btn-danger"><a href="delete?id=${part.id}">Удалить</a></button>
+        </form:form>
+
+    </div>
 </t:layout>

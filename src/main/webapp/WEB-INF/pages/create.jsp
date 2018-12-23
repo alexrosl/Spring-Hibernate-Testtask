@@ -4,13 +4,22 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:layout title="Добавить новую деталь">
-<form:form id="formPost" modelAttribute="newPart" method="post" action="submitNew">
-    Название
-    <form:input required="true" placeholder="Название детали" path="name" />
-    Количество
-    <form:input type="number" min="1" max="99" value="1" path="quantity"/>
-    Необходимость
-    <form:checkbox path="required"/>
-    <button type="submit">Сохранить</button>
-</form:form>
+    <div class="jumbotron">
+        <form:form id="formPost" modelAttribute="newPart" method="post" action="submitNew">
+            <div class="form-group">
+                <label for="nameId">Название</label>
+                <form:input id="nameId" required="true" placeholder="Название детали" path="name" />
+            </div>
+            <div class="form-group">
+                <label for="quantityId">Количество</label>
+                <form:input id="quantityId" type="number" min="0" max="99" value="1" path="quantity"/>
+            </div>
+            <div class="form-group">
+                <label for="requiredId">Необходимость</label>
+                <form:checkbox id="requiredId" path="required"/>
+            </div>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+        </form:form>
+    </div>
+
 </t:layout>

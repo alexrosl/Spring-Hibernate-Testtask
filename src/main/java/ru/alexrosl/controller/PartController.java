@@ -2,13 +2,14 @@ package ru.alexrosl.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.PagedListHolder;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.NoHandlerFoundException;
+import ru.alexrosl.ResourceNotFoundException;
 import ru.alexrosl.model.Part;
 import ru.alexrosl.service.PartService;
 
@@ -16,22 +17,44 @@ import java.util.List;
 
 @Controller
 public class PartController {
+    private int pageSize = 10;
 
     @Autowired
     PartService service;
 
     @RequestMapping("/list")
-    public String greeting(ModelMap map) {
+    public ModelAndView partList(@RequestParam(required = false) Integer page) {
+        ModelAndView modelAndView = new ModelAndView("list");
         List<Part> list = service.list();
 
-        Integer total = list.stream().
-                filter(Part::getRequired).
-                map(Part::getQuantity).
-                min(Integer::compare).get();
+        Integer total = 0;
+        if (list.size() > 0) {
+            total = list.stream().
+                    filter(Part::getRequired).
+                    map(Part::getQuantity).
+                    min(Integer::compare).get();
+        }
+        PagedListHolder<Part> pagedListHolder = new PagedListHolder<Part>(list);
+        pagedListHolder.setPageSize(pageSize);
+        int pageCount = pagedListHolder.getPageCount();
 
-        map.addAttribute("list", list);
-        map.addAttribute("total", total);
-        return "list";
+        if(page==null || page < 1) {
+            page = 1;
+        }
+
+        if(page>pageCount){
+            pagedListHolder.setPage(pageCount - 1);
+        }
+        else if(page <= pagedListHolder.getPageCount()) {
+            pagedListHolder.setPage(page-1);
+        }
+
+        modelAndView.getModelMap().addAttribute("list", pagedListHolder.getPageList());
+        modelAndView.getModelMap().addAttribute("total", total);
+        modelAndView.getModelMap().addAttribute("page", page);
+        modelAndView.getModelMap().addAttribute("maxPages", pageCount);
+
+        return modelAndView;
     }
 
     @RequestMapping(value="/search")
